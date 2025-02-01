@@ -8,7 +8,7 @@ class Colorapp {
   }
 
   static Color? get primary2color {
-    return Colors.blue[50];
+    return Colors.blue[100];
   }
 
   static Color? get greycolor {

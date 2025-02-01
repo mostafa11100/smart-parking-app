@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, widget) {
           return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
             localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,
