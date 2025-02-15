@@ -2,10 +2,11 @@ import 'package:csc_picker_plus/csc_picker_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:parking/core/constants/colorapp.dart';
+import 'package:parking/core/constants/textstyle.dart';
 
-Widget lctionandntfctionwdgt(context) {
+Widget lctionandntfctionwdgt(context, Countryref countryref) {
   return ListTile(
-    contentPadding: EdgeInsets.all(0),
+    contentPadding: const EdgeInsets.all(0),
     isThreeLine: false,
     trailing: CircleAvatar(
       radius: 20,
@@ -19,22 +20,19 @@ Widget lctionandntfctionwdgt(context) {
         ),
       ),
     ),
+    minTileHeight: 0,
     title: Padding(
       padding: const EdgeInsets.only(left: 8.0),
       child: Text(
         "Location",
-        style: Theme.of(context)
-            .textTheme
-            .displaySmall!
-            .copyWith(fontWeight: FontWeight.w700),
+        style: TextstyleConst.txtstyl26.copyWith(fontWeight: FontWeight.w600),
       ),
     ),
-    subtitle: CSCp(),
+    subtitle: CSCp(countryref),
   );
 }
 
-Widget CSCp() {
-  String countryValue = "";
+Widget CSCp(Countryref countryref) {
   String stateValue = "";
   String cityValue = "";
   String address = "";
@@ -127,7 +125,6 @@ Widget CSCp() {
             onCountryChanged: (value) {
               setState(() {
                 /// store value in country variable
-                countryValue = value;
               });
             },
 
@@ -136,7 +133,7 @@ Widget CSCp() {
               if (value != null) {
                 setState(() {
                   ///store value in state variable
-                  stateValue = value;
+                  countryref.country = value;
                 });
               }
             },
@@ -146,6 +143,7 @@ Widget CSCp() {
               if (value != null) {
                 setState(() {
                   ///store value in city variable
+
                   cityValue = value;
                 });
               }
@@ -155,4 +153,9 @@ Widget CSCp() {
       ],
     );
   });
+}
+
+class Countryref {
+  String country;
+  Countryref(this.country);
 }

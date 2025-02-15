@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget TextFeildCustom({hint, icon}) {
+Widget TextFeildCustom({hint, icon, controller}) {
   return Builder(builder: (context) {
     return TextField(
+      controller: controller,
       decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(

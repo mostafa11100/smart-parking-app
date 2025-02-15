@@ -41,6 +41,17 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
+  firebase_core: ^3.10.1
+  bloc: ^9.0.0
+  flutter_bloc: ^9.0.0
+  firebase_auth: ^5.4.1
+  either_dart: ^1.0.0
+  awesome_dialog: ^3.2.1
+  awesome_bottom_bar: ^1.2.4
+  cloud_firestore: ^5.6.3
+  time_picker_spinner: ^1.0.2
+  shimmer: ^3.0.0
+  
 
 dev_dependencies:
   flutter_test:

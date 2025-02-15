@@ -30,6 +30,10 @@ class TextstyleConst {
     return TextStyle(fontSize: 18.h, fontWeight: FontWeight.w400);
   }
 
+  static TextStyle get txtstyl19 {
+    return TextStyle(fontSize: 19.h, fontWeight: FontWeight.w500);
+  }
+
   static TextStyle get txtstyl18 {
     return TextStyle(fontSize: 16.h, fontWeight: FontWeight.w400);
   }

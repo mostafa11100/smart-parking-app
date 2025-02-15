@@ -8,6 +8,7 @@ class DarkTheme {
       colorScheme: ColorScheme.fromSeed(
           seedColor: Colorapp.primarycolor!, brightness: Brightness.dark),
       brightness: Brightness.dark,
+      typography: Typography(),
       textTheme: TextTheme(
         displayLarge: TextstyleConst.txtstyl30,
         displayMedium: TextstyleConst.txtstyl25,

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:parking/core/constants/colorapp.dart';
+import 'package:parking/core/constants/textstyle.dart';
 
 Widget search(context) {
   return Row(
     children: [
       SizedBox(
-        width: MediaQuery.of(context).size.width / 1.4,
-        height: 55.h,
+        width: MediaQuery.of(context).size.width / 1.3,
+        height: 45.h,
         child: TextField(
           decoration: InputDecoration(
             hintText: "search",
@@ -16,13 +17,13 @@ Widget search(context) {
               color: Colorapp.primarycolor,
             ),
             hintStyle:
-                Theme.of(context).textTheme.labelLarge!.copyWith(fontSize: 16),
+                TextstyleConst.txtstyl16.copyWith(fontWeight: FontWeight.w500),
             enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
+                borderRadius: BorderRadius.circular(12.r),
                 borderSide:
                     BorderSide(color: Colorapp.primarycolor!, width: 1)),
             focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
+                borderRadius: BorderRadius.circular(12.r),
                 borderSide:
                     BorderSide(color: Colorapp.primarycolor!, width: 1)),
           ),
@@ -30,8 +31,8 @@ Widget search(context) {
       ),
       const Spacer(),
       Container(
-        width: 52.w,
-        height: 52.h,
+        width: 45.w,
+        height: 45.h,
         decoration: BoxDecoration(
             color: Colorapp.primarycolor,
             borderRadius: BorderRadius.circular(8)),

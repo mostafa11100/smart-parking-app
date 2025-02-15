@@ -17,6 +17,9 @@ class Lighttheme {
       ),
       brightness: Brightness.light,
       scaffoldBackgroundColor: Colors.white,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.white,
+      ),
       textTheme: TextTheme(
         displayLarge: TextstyleConst.txtstyl30,
         displayMedium: TextstyleConst.txtstyl28,

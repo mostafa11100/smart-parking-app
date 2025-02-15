@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:parking/core/constants/colorapp.dart';
+import 'package:parking/core/constants/textstyle.dart';
 import 'package:parking/core/utils/widgets_gineral/search_widget_custom.dart';
+import 'package:parking/features/app_screens/favourit/presintation/view/widgets/favourites_loading.dart';
 
 String im =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0chpsIOTHP-oZ3uyAbOwuDXpjGNdAXmGGxw&s";
@@ -14,13 +16,12 @@ class FavouriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios_new),
+          leading: const Icon(Icons.arrow_back_ios_new),
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
-          title: Text(
-            "Favourite Parkgin Spot",
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
+          title: Text("Favourite Parkgin Spot",
+              style: TextstyleConst.txtstyl22
+                  .copyWith(fontWeight: FontWeight.w600)),
           centerTitle: true,
         ),
         body: Padding(
@@ -29,14 +30,14 @@ class FavouriteScreen extends StatelessWidget {
             height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 search(context),
                 Expanded(
                     child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: itemsoffavourite(context),
+                  child: favouriteloading(),
                 )),
               ],
             ),
@@ -55,7 +56,7 @@ Widget itemsoffavourite(context) {
             height: 140.h,
             width: MediaQuery.of(context).size.width - (50.w),
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 245, 248, 250),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(10.r),
                 border: Border.all(color: Colorapp.primarycolor!, width: 1.7)),
             child: Padding(
@@ -72,7 +73,7 @@ Widget itemsoffavourite(context) {
                         image: DecorationImage(
                             image: NetworkImage(im), fit: BoxFit.cover)),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 2.3,
                     child: Column(
@@ -90,11 +91,11 @@ Widget itemsoffavourite(context) {
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             CircleAvatar(
                               radius: 19,
                               backgroundColor: Colorapp.primarycolor,
-                              child: Icon(Icons.favorite_border_outlined),
+                              child: const Icon(Icons.favorite_border_outlined),
                             )
                           ],
                         ),
